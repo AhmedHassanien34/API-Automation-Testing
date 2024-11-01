@@ -1,0 +1,54 @@
+{
+  "validRegisterRequest": {
+    "email": "hassaniengivers+5009@gmail.com",
+    "firstName": "A",
+    "lastName": "B",
+    "password": "Givers@123",
+    "confirmPassword": "Givers@123"
+  },
+  "InvalidRegisterRequest": {
+    "email": "hassaniengivers+5007gmail.com",
+    "firstName": "A",
+    "lastName": "B",
+    "password": "Givers@123",
+    "confirmPassword": "Givers@123"
+  },
+  "WeakPasswordRequest": {
+    "email": "hassaniengivers+5007@gmail.com",
+    "firstName": "A",
+    "lastName": "B",
+    "password": "givers123",
+    "confirmPassword": "givers123"
+  },
+  "EmailAlreadyExistsRegisterRequest": {
+    "email": "hassaniengivers+2@gmail.com",
+    "firstName": "A",
+    "lastName": "B",
+    "password": "Givers@123",
+    "confirmPassword": "Givers@123"
+  },
+  "FirstNameExceedingCharacterLimitRequest": {
+    "email": "hassaniengivers+5007@gmail.com",
+    "firstName": "AhmedAhmedAhmedAhmedAhmedAhmedAhmedAhmedAhmedAhmedAhmedAhmedAhmedAhmedAhmedAhmedAhmedAhmedAhmedAhmed",
+    "lastName": "B",
+    "password": "Givers@123",
+    "confirmPassword": "Givers@123"
+  },
+  "LastNameExceedingCharacterLimitRequest": {
+    "email": "hassaniengivers+5007@gmail.com",
+    "firstName": "A",
+    "lastName": "mohamedmohamedmohamedmohamedmohamedmohamedmohamedmohamedmohamedmohamedmohamedmohamedmohamedmohamedmohamed",
+    "password": "Givers@123",
+    "confirmPassword": "Givers@123"
+  },
+
+
+  "ValidOTPVerification": {
+    "email": "hassaniengivers+111@gmail.com",
+    "otp": "34667"
+  },
+  "InValidOTPVerification": {
+    "email": "hassaniengivers+5009@gmail.com",
+    "otp": "00000"
+  }
+}

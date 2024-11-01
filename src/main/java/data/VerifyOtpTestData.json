@@ -1,0 +1,30 @@
+[
+  {
+    "description": "Valid OTP verification",
+    "email": "validemail@gmail.com",
+    "otp": "123456",
+    "expectedStatusCode": 200,
+    "expectedResponse": {
+      "message": "OTP verified successfully",
+      "isEmailVerified": true
+    }
+  },
+  {
+    "description": "Invalid OTP verification",
+    "email": "validemail@gmail.com",
+    "otp": "000000",
+    "expectedStatusCode": 400,
+    "expectedResponse": {
+      "message": "Invalid OTP"
+    }
+  },
+  {
+    "description": "Email not registered",
+    "email": "unregisteredemail@gmail.com",
+    "otp": "123456",
+    "expectedStatusCode": 404,
+    "expectedResponse": {
+      "message": "Email not found"
+    }
+  }
+]
