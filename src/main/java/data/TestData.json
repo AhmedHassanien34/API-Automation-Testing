@@ -1,0 +1,147 @@
+{
+  "validRegisterRequest": {
+    "email": "hassaniengivers+5014@gmail.com",
+    "firstName": "A",
+    "lastName": "B",
+    "password": "Givers@123",
+    "confirmPassword": "Givers@123"
+  },
+  "InvalidRegisterRequest": {
+    "email": "hassaniengivers+5007gmail.com",
+    "firstName": "A",
+    "lastName": "B",
+    "password": "Givers@123",
+    "confirmPassword": "Givers@123"
+  },
+  "WeakPasswordRequest": {
+    "email": "hassaniengivers+5007@gmail.com",
+    "firstName": "A",
+    "lastName": "B",
+    "password": "givers123",
+    "confirmPassword": "givers123"
+  },
+  "EmailAlreadyExistsRegisterRequest": {
+    "email": "hassaniengivers+2@gmail.com",
+    "firstName": "A",
+    "lastName": "B",
+    "password": "Givers@123",
+    "confirmPassword": "Givers@123"
+  },
+  "FirstNameExceedingCharacterLimitRequest": {
+    "email": "hassaniengivers+5007@gmail.com",
+    "firstName": "AhmedAhmedAhmedAhmedAhmedAhmedAhmedAhmedAhmedAhmedAhmedAhmedAhmedAhmedAhmedAhmedAhmedAhmedAhmedAhmed",
+    "lastName": "B",
+    "password": "Givers@123",
+    "confirmPassword": "Givers@123"
+  },
+  "LastNameExceedingCharacterLimitRequest": {
+    "email": "hassaniengivers+5007@gmail.com",
+    "firstName": "A",
+    "lastName": "mohamedmohamedmohamedmohamedmohamedmohamedmohamedmohamedmohamedmohamedmohamedmohamedmohamedmohamedmohamed",
+    "password": "Givers@123",
+    "confirmPassword": "Givers@123"
+  },
+
+  "MissingEmailandValidPasswordLogin": {
+    "password": "Givers@123"
+  },
+
+  "InvalidEmailandValidPasswordLogin": {
+    "email": "hassaniengiversgmail.com",
+    "password": "Givers@123"
+  },
+
+  "ValidEmailandInvalidPasswordLogin" : {
+    "email": "hassaniengivers+1@gmail.com",
+    "password": "Givers123"
+  },
+
+  "UserIsnotExistLogin" : {
+    "email": "hassaniengivers+888778@gmail.com",
+    "password": "Givers123"
+  },
+
+  "EmailCaseSensitivityandPasswordLogin" : {
+    "email": "HASSANIENGIVERS@GMAIL.COM",
+    "password": "Ahmed#123"
+  },
+
+  "ValidOTPVerification": {
+    "otp": "007"
+  },
+  "InValidOTPVerification": {
+    "email": "hassaniengivers+5012@gmail.com",
+    "otp": "00000"
+  },
+
+  "ResendOTPWithEmailIsNotExist" : {
+  },
+
+  "ValidEmailandPassword": {
+    "email": "hassaniengivers+2@gmail.com",
+    "password": "Ahmed#123"
+  },
+
+  "ResetPasswordEmail":{
+    "email": "hassaniengivers+2@gmail.com"
+  },
+
+  "ResetPasswordEmailMissingEmail":{
+  },
+
+  "ResetPasswordInvalidEmail":{
+    "email": "hassaniengiversgmail.com"
+  },
+
+  "ResetPasswordEmailNon_RegisteredEmail":{
+    "email": "nonexistent@example.com"
+  },
+
+  "ResetPasswordEmailExceedsMaximumLength":{
+    "email": "veryveryveryveryveryveryverylongemailaddresswhichiswaytoolongandshouldnotbeaccepted@example.com"
+  },
+
+  "ResetPasswordEmailEmptyField":{
+    "email": ""
+  },
+
+  "ResetPasswordConfirm": {
+    "email": "hassaniengivers+2@gmail.com",
+    "otp": "007",
+    "password": "Ahmed#123"
+  },
+  "ResetPasswordConfirmMissingEmail" :{
+  "otp": "007",
+  "password": "Ahmed#123"
+},
+  "ResetPasswordConfirmMissingPassword": {
+    "email": "hassaniengivers+2@gmail.com",
+    "otp": "007"
+  },
+
+  "ResetPasswordConfirmMissingOTP": {
+    "email": "hassaniengivers+2@gmail.com",
+    "password": "Ahmed#123"
+  },
+
+  "ResetPasswordConfirmInvalidOTP" : {
+    "email": "hassaniengivers+2@gmail.com",
+    "otp": "007a",
+    "password": "Ahmed#123"
+  },
+  "ResetPasswordConfirmWeakPassword" : {
+    "email": "hassaniengivers+2@gmail.com",
+    "otp": "007",
+    "password": "Ahmed123"
+  },
+  "ResetPasswordConfirmNon_RegisteredEmail": {
+    "email": "hassaniengivers@valeo.com",
+    "otp": "007",
+    "password": "Ahmed#123"
+  },
+
+  "VerifiedGiversAccount" : {
+    "email": "hassaniengivers+12@gmail.com",
+    "password" : "Ahmed@123"
+  }
+}
