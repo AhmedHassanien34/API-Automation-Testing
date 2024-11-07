@@ -1,4 +1,4 @@
 package tests.CommunityAPIs.NGO;
 
-public class AddNGOCommunity {
+public class AddNGOMember {
 }

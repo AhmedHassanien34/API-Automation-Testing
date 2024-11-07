@@ -1,4 +1,4 @@
 package tests.CommunityAPIs.Comments;
 
-public class DeleteLikeComment {
+public class UnLikeComment {
 }

@@ -1,4 +1,4 @@
-package tests; // Adjust the package name as per your project structure
+package tests.AuthenticationAPIs; // Adjust the package name as per your project structure
 
 import io.restassured.response.Response;
 import org.testng.Assert;

@@ -143,5 +143,158 @@
   "VerifiedGiversAccount" : {
     "email": "hassaniengivers+12@gmail.com",
     "password" : "Ahmed@123"
+  },
+
+
+  "ValidCreationCommunity" : {
+    "name": "Automation Test By RestAssured",
+    "description": "Automation Test By RestAssured",
+    "professionalEmail": "AutomationTest@RestAssured.com",
+    "coverPhoto": "https://giversapp.fra1.digitaloceanspaces.com/production/1729751805840_OIP.jpg"
+  },
+
+  "InValidProfessionalEmailCreationCommunity" : {
+    "name": "Automation Test By RestAssured",
+    "description": "Automation Test By RestAssured",
+    "professionalEmail": "AutomationTestRestAssuredaa.com",
+    "coverPhoto": "https://giversapp.fra1.digitaloceanspaces.com/production/1729751805840_OIP.jpg"
+  },
+
+  "MissingRequiredFieldsCreationCommunity" : {
+    "professionalEmail": "AutomationTest@RestAssured.com",
+    "coverPhoto": "https://giversapp.fra1.digitaloceanspaces.com/production/1729751805840_OIP.jpg"
+  },
+  "CommunityNameExceedsCharacterLimitCreationCommunity": {
+    "name": "Automation Test By RestAssured Automation Test By RestAssuredAutomation Test By RestAssuredAutomation Test By RestAssuredAutomation Test By RestAssuredAutomation Test By RestAssuredAutomation Test By RestAssuredAutomation Test By RestAssuredAutomation Test By RestAssuredAutomation Test By RestAssuredAutomation Test By RestAssuredAutomation Test By RestAssuredAutomation Test By RestAssuredAutomation Test By RestAssuredAutomation Test By RestAssuredAutomation Test By RestAssured",
+    "description": "Automation Test By RestAssured",
+    "professionalEmail": "AutomationTest@RestAssured.com",
+    "coverPhoto": "https://giversapp.fra1.digitaloceanspaces.com/production/1729751805840_OIP.jpg"
+  },
+
+  "EmptyCoverPhotoURLCreationCommunity" : {
+    "name": "Automation Test By RestAssured",
+    "description": "Automation Test By RestAssured",
+    "professionalEmail": "AutomationTest@RestAssured.com",
+    "coverPhoto": ""
+  },
+
+  "InvalidCoverPhotoURLCreationCommunity": {
+    "name": "Automation Test By RestAssured",
+    "description": "Automation Test By RestAssured",
+    "professionalEmail": "AutomationTest@RestAssured.com",
+    "coverPhoto": "Invalid-url"
+  },
+
+  "DuplicateNameCreationCommunity": {
+    "name": "Duplicate Name",
+    "description": "Don't Remove it 3shan khatry",
+    "professionalEmail": "AutomationTest@RestAssuredl.com",
+    "coverPhoto": "https://giversapp.fra1.digitaloceanspaces.com/production/1729751805840_OIP.jpg"
+  },
+
+  "SpecialCharactersCommunityNameCreationCommunity" : {
+    "name": "@!#Novartis$%",
+    "description": "Don't Remove it 3shan khatry",
+    "professionalEmail": "AutomationTest@RestAssuredl.com",
+    "coverPhoto": "https://giversapp.fra1.digitaloceanspaces.com/production/1729751805840_OIP.jpg"
+  },
+
+  "ValidVerifyingCreationNGO" : {
+    "name": "RestAssured Verifying NGO",
+    "type": 1,
+    "coverPhoto": "https://giversapp.fra1.digitaloceanspaces.com/production/1729751805840_OIP.jpg"
+  },
+
+  "ValidCreatingCreationNGO" : {
+    "name": "RestAssured Creating NGOa",
+    "type": 2,
+    "coverPhoto": "https://giversapp.fra1.digitaloceanspaces.com/production/1729751805840_OIP.jpg"
+  },
+
+  "MissingCoverPhotoURLCreationNGO" : {
+    "name": "RestAssured Verifying NGO",
+    "type": 1
+  },
+
+  "InvalidCoverPhotoURLFormatCreationNGO" : {
+    "name": "RestAssured Verifying NGO",
+    "type": 1,
+    "coverPhoto": "Invalid-URL"
+  },
+
+  "UnsupportedCommunityTypeCreationNGO" : {
+    "name": "RestAssured NGOa",
+    "type": 5,
+    "coverPhoto": "https://giversapp.fra1.digitaloceanspaces.com/production/1729751805840_OIP.jpg"
+  },
+
+  "MissingCommunityNameCreationNGO" : {
+    "type": 1,
+    "coverPhoto": "https://giversapp.fra1.digitaloceanspaces.com/production/1729751805840_OIP.jpg"
+  },
+
+  "EmptyCommunityNameCreationNGO" : {
+    "name": "",
+    "type": 1,
+    "coverPhoto": "https://giversapp.fra1.digitaloceanspaces.com/production/1729751805840_OIP.jpg"
+  },
+
+  "DuplicateCommunityNameCreationNGO" : {
+    "name": "RestAssured Duplicate NGO",
+    "type": 1,
+    "coverPhoto": "https://giversapp.fra1.digitaloceanspaces.com/production/1729751805840_OIP.jpg"
+  },
+
+  "LongCommunityNameCreationNGO" : {
+    "name": "RestAssured LONG NGO RestAssured LONG NGO RestAssured LONG NGO RestAssured LONG NGO RestAssured LONG NGO RestAssured LONG NGO RestAssured LONG NGO RestAssured LONG NGO RestAssured LONG NGO RestAssured LONG NGO RestAssured LONG NGO RestAssured LONG NGO RestAssured LONG NGO RestAssured LONG NGO RestAssured LONG NGO RestAssured LONG NGO RestAssured LONG NGO RestAssured LONG NGO RestAssured LONG NGO ",
+    "type": 1,
+    "coverPhoto": "https://giversapp.fra1.digitaloceanspaces.com/production/1729751805840_OIP.jpg"
+  },
+
+  "ValidJoinCommunity" : {
+    "professionalEmail": "AutomationTest@RestAssuredC.com"
+  },
+
+  "JoinCommunityWithInValidEmail" : {
+    "professionalEmail": "Invalid.Email"
+  },
+
+  "JoinCommunityWithMissingProfessionalEmail" : {
+  },
+
+  "JoinCommunityWithExistProfessionalEmail" : {
+    "professionalEmail": "hassaniengivers+2@gmail.com"
+  },
+
+  "ValidConfirmJoiningCommunity" : {
+    "professionalEmail": "hassaniengivers@RestAssuredCata.com",
+    "otp": "007"
+  },
+
+  "ConfirmJoiningCommunityWithInvalidOTP" : {
+    "professionalEmail": "hassaniengivers@RestAssuredCata.com",
+    "otp": "99999"
+  },
+
+  "ConfirmJoiningCommunityWithMissingOTP" : {
+    "professionalEmail": "hassaniengivers@RestAssuredCata.com"
+  },
+
+  "ConfirmJoiningCommunityWithInvalidProfessionalEmail" : {
+    "professionalEmail": "Invalid-email",
+    "otp": "007"
+  },
+
+  "ConfirmJoiningCommunityWithEmptyOTP" : {
+    "professionalEmail": "hassaniengivers@RestAssuredCata.com",
+    "otp": ""
+  },
+
+  "ConfirmJoiningCommunityWithNonNumericCharactersOTP" : {
+    "professionalEmail": "hassaniengivers@RestAssuredCata.com",
+    "otp": "12abc"
   }
 }
+
+
+

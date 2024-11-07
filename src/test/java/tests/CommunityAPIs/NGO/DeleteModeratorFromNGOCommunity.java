@@ -1,4 +1,4 @@
 package tests.CommunityAPIs.NGO;
 
-public class DeleteModeratorToNGOCommunity {
+public class DeleteModeratorFromNGOCommunity {
 }

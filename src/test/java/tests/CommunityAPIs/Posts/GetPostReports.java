@@ -1,4 +1,4 @@
-package tests.CommunityAPIs.Comments;
+package tests.CommunityAPIs.Posts;
 
 public class GetPostReports {
 }

@@ -1,8 +1,7 @@
-package tests;
+package tests.AuthenticationAPIs;
 
 import io.restassured.response.Response;
 import org.testng.Assert;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import utils.RestClient;
 
