@@ -33,7 +33,7 @@ public class LoginApiTest {
         Assert.assertNotNull(response.jsonPath().getString("refreshToken"), "Refresh token should not be null!");
     }
 
-    @Test(priority = 1)
+    @Test(priority = 2)
     public void MissingEmailandValidPasswordLogin() throws IOException {
         Map<String, Object> requestBody = RestClient.getTestData("MissingEmailandValidPasswordLogin");
 
@@ -47,7 +47,7 @@ public class LoginApiTest {
         Assert.assertEquals(response.jsonPath().getString("message"), "Email is required");
     }
 
-    @Test(priority = 1)
+    @Test(priority = 3)
     public void InvalidEmailandValidPasswordLogin() throws IOException {
         Map<String, Object> requestBody = RestClient.getTestData("ValidEmailandInvalidPasswordLogin");
 
@@ -61,7 +61,7 @@ public class LoginApiTest {
         Assert.assertEquals(response.jsonPath().getString("message"), "Email or password is incorrect");
     }
 
-    @Test(priority = 1)
+    @Test(priority = 4)
     public void UserIsnotExistLogin() throws IOException {
         Map<String, Object> requestBody = RestClient.getTestData("UserIsnotExistLogin");
 
@@ -75,7 +75,7 @@ public class LoginApiTest {
         Assert.assertEquals(response.jsonPath().getString("error"), "Not Found");
     }
 
-    @Test(priority = 1)
+    @Test(priority = 5)
     public void EmailCaseSensitivityAndValidPasswordLogin() throws IOException {
         Map<String, Object> requestBody = RestClient.getTestData("EmailCaseSensitivityandPasswordLogin");
 

@@ -51,7 +51,7 @@ public class RefreshTokenApiTest {
 
     }
 
-    @Test(priority = 1)
+    @Test(priority = 2)
     public  void MissingRefreshTokenTest() {
 
         Response response = RestAssured.given()
@@ -66,7 +66,7 @@ public class RefreshTokenApiTest {
 
     }
 
-    @Test(priority = 1)
+    @Test(priority = 3)
     public  void InvalidRefreshTokenTest() {
 
         String requestBody = "{\"refreshToken\":\"" + "InvalidToken123" +"\"}";
@@ -84,7 +84,7 @@ public class RefreshTokenApiTest {
 
     }
 
-    @Test(priority = 1)
+    @Test(priority = 4)
     public  void MissingTokenFieldRefreshTokenTest() {
 
         String requestBody = "{\"refreshToken\":\"" + "\"}";

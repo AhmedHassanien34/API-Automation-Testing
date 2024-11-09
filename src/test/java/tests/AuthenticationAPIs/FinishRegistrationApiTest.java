@@ -35,8 +35,6 @@ public class FinishRegistrationApiTest {
 
     @Test(priority = 1)
     public void FinishRegistrationTest() {
-        // Base URI
-        RestAssured.baseURI = "https://stg.givers-app.com";
 
         // Path to your files
         File frontPhoto = new File("images/Front_ID.png");
@@ -51,8 +49,11 @@ public class FinishRegistrationApiTest {
                 .multiPart("nationalIdBackPhoto", backPhoto, "image/png")     // File field
                 .post("/api/auth/finish-registration");
 
+        System.out.println("Response Body: " + response.getBody().asString());
         // Assert to check status code if needed
-        Assert.assertEquals(response.getStatusCode(), 201, "Expected status code 400 but received " + response.getStatusCode());
+        Assert.assertEquals(response.getStatusCode(), 201, "Expected status code 201 but received " + response.getStatusCode());
+
+
     }
 
     @Test(priority = 2)

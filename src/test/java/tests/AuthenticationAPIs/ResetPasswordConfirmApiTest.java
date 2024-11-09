@@ -97,7 +97,7 @@ public class ResetPasswordConfirmApiTest {
     }
 
 
-    @Test(priority = 6)
+    @Test(priority = 7)
     public void ResetPasswordConfirmNon_RegisteredEmail() throws IOException {
         Map<String, Object> requestBody = RestClient.getTestData("ResetPasswordConfirmNon_RegisteredEmail");
 

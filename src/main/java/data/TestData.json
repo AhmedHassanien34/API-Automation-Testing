@@ -141,8 +141,8 @@
   },
 
   "VerifiedGiversAccount" : {
-    "email": "hassaniengivers+12@gmail.com",
-    "password" : "Ahmed@123"
+    "email": "hassaniengivers+2@gmail.com",
+    "password" : "Ahmed#123"
   },
 
 
@@ -293,7 +293,179 @@
   "ConfirmJoiningCommunityWithNonNumericCharactersOTP" : {
     "professionalEmail": "hassaniengivers@RestAssuredCata.com",
     "otp": "12abc"
+  },
+
+  "EditCommunityWithCoverPhotoAndDescription" : {
+    "description": "Updated community description",
+    "coverPhoto": "https://giversapp.fra1.digitaloceanspaces.com/dev/updated_cover_photo"
+  },
+
+  "EditCommunityWithDescriptionOnly" : {
+  "description": "New description for community"
+  },
+
+  "EditCommunityWithCoverPhotoOnly" : {
+    "coverPhoto": "https://giversapp.fra1.digitaloceanspaces.com/dev/updated_cover_photo"
+  },
+
+  "EditCommunityWithEmptyBody" : {
+
+  },
+
+  "EditCommunityWithDescriptionHaveNumbers" : {
+    "description": 12345
+  },
+
+  "EditCommunityWithDescriptionExceedLimit" : {
+    "description": "Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description Updated community description ",
+    "coverPhoto": "https://giversapp.fra1.digitaloceanspaces.com/dev/updated_cover_photo"
+  },
+
+  "EditCommunityWithDescriptionHaveSpecialCharacters" : {
+    "description": "Community description with special characters !@#$%^&*()"
+  },
+
+  "ValidCreationCommunityPost" : {
+    "communityId": 38,
+    "content": "Automation Test By RestAssured",
+    "media": [
+      {
+        "filename": "RestAssured",
+        "filetype": "RestAssured/png",
+        "filepath": "https://giversapp.fra1.digitaloceanspaces.com/production/1731156603996_Screenshot_20241101_140158_YouTube.jpg",
+        "size": 657188
+      } ]
+  },
+
+  "AddCommunityPostWithMissingContent" : {
+    "communityId": 38,
+    "media": [
+      {
+        "filename": "Screenshot.png",
+        "filetype": "image/png",
+        "filepath": "http://uploads/posts/1719689743213-666853805.png",
+        "size": 657188
+      }
+    ]
+  },
+
+  "AddCommunityPostWithMissingCommunityId" : {
+    "content": "Automation Test By RestAssured",
+    "media": [
+      {
+        "filename": "Screenshot.png",
+        "filetype": "image/png",
+        "filepath": "http://uploads/posts/1719689743213-666853805.png",
+        "size": 657188
+      }
+    ]
+  },
+
+  "AddCommunityPostWithInvalidCommunityId" : {
+    "communityId": 9999,
+    "content": "Automation Test By RestAssured",
+    "media": [
+      {
+        "filename": "RestAssured",
+        "filetype": "RestAssured/png",
+        "filepath": "https://giversapp.fra1.digitaloceanspaces.com/production/1731156603996_Screenshot_20241101_140158_YouTube.jpg",
+        "size": 657188
+      } ]
+  },
+
+  "AddCommunityPostWithInvalidMediaFileFormat" : {
+    "communityId": 38,
+    "content": "Automation Test By RestAssured",
+    "media": [
+      {
+        "filename": "",
+        "filetype": "RestAssured/png",
+        "filepath": "https://giversapp.fra1.digitaloceanspaces.com/production/1731156603996_Screenshot_20241101_140158_YouTube.jpg",
+        "size": 657188
+      }
+    ]
+  },
+
+
+    "AddCommunityPostWithInvalidMediaFilePath" : {
+      "communityId": 38,
+      "content": "Automation Test By RestAssured",
+      "media": [
+        {
+          "filename": "AAA",
+          "filetype": "RestAssured/png",
+          "filepath": "giversapp.fra1.digitaloceanspaces.com/production/1731156603996_Screenshot_20241101_140158_YouTube.jpg",
+          "size": 657188
+        }
+      ]
+    },
+
+
+    "AddCommunityPostWithEmptyBody" : {
+
+    },
+
+  "AddCommunityPostWithNoMedia" : {
+    "communityId": 38,
+    "content": "Automation Test By RestAssured"
+  },
+
+  "AddCommunityPostWithLargePostContent": {
+    "communityId": 38,
+    "content": "Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured "
+  },
+
+
+  "ValidEditionCommunityPost" : {
+    "content": "post text",
+    "media": [
+      {
+        "filename": "Screenshot 2024-05-02 at 2.03.05 PM111111111111111111111111111111111.png",
+        "filetype": "image/png",
+        "filepath": "http://uploads/needy/1719689743213-666853805.png",
+        "size": 6571884
+      }
+    ]
+  },
+
+  "EditCommunityPostWithInvalidMediaFileFormat" : {
+    "content": "Automation Test By RestAssured",
+    "media": [
+      {
+        "filename": "",
+        "filetype": "RestAssured/png",
+        "filepath": "https://giversapp.fra1.digitaloceanspaces.com/production/1731156603996_Screenshot_20241101_140158_YouTube.jpg",
+        "size": 657188
+      }
+    ]
+  },
+
+
+  "EditCommunityPostWithInvalidMediaFilePath" : {
+    "content": "Automation Test By RestAssured",
+    "media": [
+      {
+        "filename": "AAA",
+        "filetype": "RestAssured/png",
+        "filepath": "giversapp.fra1.digitaloceanspaces.com/production/1731156603996_Screenshot_20241101_140158_YouTube.jpg",
+        "size": 657188
+      }
+    ]
+  },
+
+
+  "EditCommunityPostWithEmptyBody" : {
+
+  },
+
+  "EditCommunityPostWithNoMedia" : {
+    "content": "post text"
+  },
+
+  "EditCommunityPostWithLargePostContent": {
+    "content": "Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured Automation Test By RestAssured "
   }
+
 }
 
 
