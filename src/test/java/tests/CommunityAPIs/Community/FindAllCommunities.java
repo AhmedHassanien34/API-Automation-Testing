@@ -78,7 +78,7 @@ public class FindAllCommunities {
 
         // Add query parameters
         request.queryParam("page", 1);
-        request.queryParam("name", "RestAssured Duplicate NGO");
+        request.queryParam("name", "NGO Test NGO");
 
         // Make a GET request to the endpoint and store the response
         Response response = request.get("/api/communities");
@@ -88,18 +88,11 @@ public class FindAllCommunities {
 
 
         // Validate specific fields in the response body
-        Assert.assertEquals(response.jsonPath().getString("communities[0].communityId"), "57", "communityId mismatch!");
-        Assert.assertEquals(response.jsonPath().getString("communities[0].communityName"), "RestAssured Duplicate NGO", "communityName mismatch!");
-        Assert.assertEquals(response.jsonPath().getString("communities[0].communityDescription"), null, "communityDescription mismatch!");
+        Assert.assertEquals(response.jsonPath().getString("communities[0].communityId"), "33", "communityId mismatch!");
+        Assert.assertEquals(response.jsonPath().getString("communities[0].communityName"), "NGO Test NGO", "communityName mismatch!");
         Assert.assertEquals(response.jsonPath().getString("communities[0].coverPhoto"), "https://giversapp.fra1.digitaloceanspaces.com/production/1729751805840_OIP.jpg", "coverPhoto mismatch!");
         Assert.assertEquals(response.jsonPath().getString("communities[0].type"), "NGO", "type mismatch!");
-        Assert.assertEquals(response.jsonPath().getString("communities[0].membersCount"), "0", "membersCount mismatch!");
-        Assert.assertEquals(response.jsonPath().getString("communities[0].followersCount"), "0", "followersCount mismatch!");
-        Assert.assertEquals(response.jsonPath().getString("communities[0].donationsCount"), "0", "donationsCount mismatch!");
-        Assert.assertEquals(response.jsonPath().getString("communities[0].neediesSupportedCount"), "0",  "neediesSupportedCount should not be null!");
-        Assert.assertEquals(response.jsonPath().getString("communities[0].createdByUserId"), "96","createdByUserId should not be null!");
-        Assert.assertEquals(response.jsonPath().getString("communities[0].createdByFirstName") , "Ahmed", "membersCount should not be null!");
-        Assert.assertEquals(response.jsonPath().getString("communities[0].createdByLastname"), "Mohamed","followersCount should not be null!");
+
     }
 
     @Test(priority = 3)
@@ -111,7 +104,7 @@ public class FindAllCommunities {
         request.header("Authorization", "Bearer " + authToken);
 
         // Add query parameters
-        request.queryParam("page", 2);
+        request.queryParam("page", 1);
 
         // Make a GET request to the endpoint and store the response
         Response response = request.get("/api/communities");

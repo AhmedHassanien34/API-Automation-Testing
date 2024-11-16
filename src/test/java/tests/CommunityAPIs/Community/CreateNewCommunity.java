@@ -16,6 +16,8 @@ public class CreateNewCommunity {
 
     private String authToken;
 
+    public static String CommunityId;
+
     @BeforeTest
     public void ValidEmailandValidPasswordLogin() throws IOException {
         Map<String, Object> requestBody = RestClient.getTestData("ValidEmailandPassword");
@@ -48,6 +50,13 @@ public class CreateNewCommunity {
 
         // Validate response
         Assert.assertEquals(response.getStatusCode(), 201, "Status code mismatch!");
+
+        // Check that id, communityId, userId, isModeratorPost, isPinned and createdAt are not null
+        Assert.assertNotNull(response.jsonPath().getString("id"), "id should not be null!");
+        Assert.assertNotNull(response.jsonPath().getString("name"), "communityId should not be null!");
+        Assert.assertNotNull(response.jsonPath().getString("createdAt"), "userId should not be null!");
+
+        CommunityId = response.jsonPath().getString("id");  // Adjust "id" based on your JSON structure
 
     }
 

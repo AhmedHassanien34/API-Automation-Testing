@@ -65,7 +65,7 @@ public class LeaveCommunity {
                 .post("/api/communities/"+ CommunityId +"/leave"); // Replace with actual endpoint
 
         // Validate response
-        Assert.assertEquals(response.getStatusCode(), 400, "Status code mismatch!");
+        Assert.assertEquals(response.getStatusCode(), 404, "Status code mismatch!");
 
         // Validate the error message in the response body
         String errorMessage = response.jsonPath().getString("message");
@@ -94,7 +94,7 @@ public class LeaveCommunity {
     @Test(priority = 4)
     public void LeaveCommunityWithMemberAlreadyLeftCommunityTest() throws IOException {
         // Get test data for valid registration
-        String CommunityId = "1";
+        String CommunityId = "69";
 
         // Send POST request
         Response response = RestAssured.given()

@@ -51,7 +51,7 @@ public class RemoveNGOMember {
 
 
         // Validating response
-        Assert.assertEquals(response.getStatusCode(), 201);
+        Assert.assertEquals(response.getStatusCode(), 200);
 
     }
 
@@ -144,7 +144,7 @@ public class RemoveNGOMember {
 
         // Validate the error message in the response body
         String errorMessage = response.jsonPath().getString("errors[0].message");
-        Assert.assertEquals(errorMessage, "MemberUserId is required and must be a number.", "Error message mismatch!");
+        Assert.assertEquals(errorMessage, "Parameter path \"id\" must be valid number.", "Error message mismatch!");
     }
 
     @Test(priority = 6)

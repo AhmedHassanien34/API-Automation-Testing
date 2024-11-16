@@ -62,7 +62,7 @@ public class LoginApiTest {
     }
 
     @Test(priority = 4)
-    public void UserIsnotExistLogin() throws IOException {
+    public void LoginWithUserIsnotExist() throws IOException {
         Map<String, Object> requestBody = RestClient.getTestData("UserIsnotExistLogin");
 
         // Send POST request to register endpoint

@@ -15,6 +15,7 @@ public class ConfirmJoiningCommunity {
 
     private String authToken;
 
+
     @BeforeTest
     public void ValidEmailandValidPasswordLogin() throws IOException {
         Map<String, Object> requestBody = RestClient.getTestData("ValidEmailandPassword");

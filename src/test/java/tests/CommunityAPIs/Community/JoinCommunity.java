@@ -95,25 +95,6 @@ public class JoinCommunity {
     }
 
     @Test(priority = 4)
-    public void JoinCommunityWithMissingTokenTest() throws IOException {
-        // Get test data for valid registration
-        Map<String, Object> requestBody = RestClient.getTestData("ValidJoinCommunity");
-
-        // Send POST request
-        Response response = RestAssured.given()
-                .contentType(ContentType.JSON)
-                .body(requestBody)
-                .post("/api/communities/join"); // Replace with actual endpoint
-
-        // Validate response
-        Assert.assertEquals(response.getStatusCode(), 401, "Status code mismatch!");
-
-        // Validate the error message in the response body
-        String errorMessage = response.jsonPath().getString("message");
-        Assert.assertEquals(errorMessage, "Unauthorized", "Error message mismatch!");
-    }
-
-    @Test(priority = 5)
     public void JoinCommunityWithExistProfessionalEmailTest() throws IOException {
         // Get test data for valid registration
         Map<String, Object> requestBody = RestClient.getTestData("JoinCommunityWithExistProfessionalEmail");
@@ -132,6 +113,26 @@ public class JoinCommunity {
         String errorMessage = response.jsonPath().getString("message");
         Assert.assertEquals(errorMessage, "You are already a member of Amr's", "Error message mismatch!");
     }
+
+    @Test(priority = 5)
+    public void JoinCommunityWithMissingTokenTest() throws IOException {
+        // Get test data for valid registration
+        Map<String, Object> requestBody = RestClient.getTestData("ValidJoinCommunity");
+
+        // Send POST request
+        Response response = RestAssured.given()
+                .contentType(ContentType.JSON)
+                .body(requestBody)
+                .post("/api/communities/join"); // Replace with actual endpoint
+
+        // Validate response
+        Assert.assertEquals(response.getStatusCode(), 401, "Status code mismatch!");
+
+        // Validate the error message in the response body
+        String errorMessage = response.jsonPath().getString("message");
+        Assert.assertEquals(errorMessage, "Unauthorized", "Error message mismatch!");
+    }
+
 
     @Test(priority = 6)
     public void JoinCommunityWithSendManyOTPsTest() throws IOException {

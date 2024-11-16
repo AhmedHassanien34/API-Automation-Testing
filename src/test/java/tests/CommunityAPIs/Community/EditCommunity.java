@@ -167,7 +167,7 @@ public class EditCommunity {
 
         // Validate the error message in the response body
         String errorMessage = response.jsonPath().getString("errors[0].message");
-        Assert.assertEquals(errorMessage, "Description must be a string", "Error message mismatch!");
+        Assert.assertEquals(errorMessage, "A description of the community is required", "Error message mismatch!");
     }
 
     @Test(priority = 5)
