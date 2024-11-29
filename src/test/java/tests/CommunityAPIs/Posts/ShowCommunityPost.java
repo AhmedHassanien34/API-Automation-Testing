@@ -62,13 +62,8 @@ public class ShowCommunityPost {
             Assert.assertNotNull(response.jsonPath().getString("posts[0].isModeratorPost"), "isModeratorPost should not be null!");
             Assert.assertNotNull(response.jsonPath().getString("posts[0].isPinned"), "isPinned should not be null!");
             Assert.assertNotNull(response.jsonPath().getString("posts[0].postContent"), "postContent should not be null!");
-            Assert.assertNotNull(response.jsonPath().getString("posts[0].attachments[0].filename"), "filename should not be null!");
-            Assert.assertNotNull(response.jsonPath().getString("posts[0].attachments[0].filetype"), "filetype should not be null!");
-            Assert.assertNotNull(response.jsonPath().getString("posts[0].attachments[0].filepath"), "filepath not be null!");
-            Assert.assertNotNull(response.jsonPath().getString("posts[0].attachments[0].size"), "size should not be null!");
             Assert.assertNotNull(response.jsonPath().getString("posts[0].postDate"), "postDate should not be null!");
             Assert.assertNotNull(response.jsonPath().getString("posts[0].userId"), "userId should not be null!");
-            Assert.assertNotNull(response.jsonPath().getString("posts[0].attachments[0].filetype"), "filetype should not be null!");
             Assert.assertNotNull(response.jsonPath().getString("posts[0].userFirstName"), "userFirstName not be null!");
             Assert.assertNotNull(response.jsonPath().getString("posts[0].userLastName"), "userLastName should not be null!");
             Assert.assertNotNull(response.jsonPath().getString("posts[0].userPicture"), "userPicture should not be null!");

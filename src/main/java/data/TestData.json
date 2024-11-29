@@ -141,15 +141,15 @@
   },
 
   "VerifiedGiversAccount" : {
-    "email": "hassaniengivers+2@gmail.com",
+    "email": "hassaniengivers+3@gmail.com",
     "password" : "Ahmed#123"
   },
 
 
   "ValidCreationCommunity" : {
-    "name": "Script Automation Test",
+    "name": "API Automation Test",
     "description": "Automation Test By RestAssured",
-    "professionalEmail": "AutomationTest@Test.com",
+    "professionalEmail": "AutomationTest@APITest.com",
     "coverPhoto": "https://giversapp.fra1.digitaloceanspaces.com/production/1729751805840_OIP.jpg"
   },
 
@@ -200,13 +200,13 @@
   },
 
   "ValidVerifyingCreationNGO" : {
-    "name": "RestAssured Verifying NGO NGO NGO",
+    "name": "RestAssured Verifying NGO NGO NGO NGO",
     "type": 1,
     "coverPhoto": "https://giversapp.fra1.digitaloceanspaces.com/production/1729751805840_OIP.jpg"
   },
 
   "ValidCreatingCreationNGO" : {
-    "name": "RestAssured Creating NGO NGO NGO",
+    "name": "RestAssured Creating NGO NGO NGO NGO",
     "type": 2,
     "coverPhoto": "https://giversapp.fra1.digitaloceanspaces.com/production/1729751805840_OIP.jpg"
   },

@@ -29,7 +29,7 @@ public class AddComment {
         // Check that accessToken is not null
         Assert.assertNotNull(response.jsonPath().getString("accessToken"), "Access token should not be null!");
 
-        authToken = response.jsonPath().getString("accessToken");  // Adjust "token" based on your JSON structure
+        authToken = response.jsonPath().getString("accessToken");
     }
 
 
