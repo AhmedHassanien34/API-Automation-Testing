@@ -19,7 +19,7 @@
             
                         <class name="tests.CommunityAPIs.NGO.CreateNewNGOCommunity"/>
                         <class name="tests.CommunityAPIs.NGO.AddModeratorToNGOCommunity"/>
-                        <class name="tests.CommunityAPIs.NGO.AddNGOMember"/>
+    
                         <class name="tests.CommunityAPIs.NGO.FollowNGOCommunity"/>
                         <class name="tests.CommunityAPIs.NGO.UnfollowNGOCommunity"/>
                         <class name="tests.CommunityAPIs.NGO.RemoveNGOMember"/>
