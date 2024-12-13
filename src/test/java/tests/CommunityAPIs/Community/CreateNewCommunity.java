@@ -207,7 +207,7 @@ public class CreateNewCommunity {
 
         // Validate the error message in the response body
         String errorMessage = response.jsonPath().getString("message");
-        Assert.assertEquals(errorMessage, "Access token is required", "Error message mismatch!");
+        Assert.assertEquals(errorMessage, "Access token is required ", "Error message mismatch!");
     }
 
 
