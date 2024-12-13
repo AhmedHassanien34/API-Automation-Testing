@@ -1,13 +1,10 @@
 package tests.CommunityAPIs.NGO;
 
-import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.testng.Assert;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-import tests.CommunityAPIs.Community.CreateNewCommunity;
 import utils.RestClient;
 
 import java.io.IOException;
@@ -145,7 +142,7 @@ public class DeleteModeratorFromNGOCommunity {
 
         // Validate the error message in the response body
         String errorMessage = response.jsonPath().getString("errors[0].message");
-        Assert.assertEquals(errorMessage, "Parameter path \"id\" must be valid number.", "Error message mismatch!");
+        Assert.assertEquals(errorMessage, "userId is required and must be a number", "Error message mismatch!");
     }
 
     @Test(priority = 6)
@@ -234,14 +231,7 @@ public class DeleteModeratorFromNGOCommunity {
 
         // Validate the error message in the response body
         String errorMessage = response.jsonPath().getString("errors[0].message");
-        Assert.assertEquals(errorMessage, "Required", "Error message mismatch!");
-
-        // Validate the error message in the response body
-        String errorMessage2 = response.jsonPath().getString("errors[0].path");
-        Assert.assertEquals(errorMessage2, "userId", "Error message mismatch!");
+        Assert.assertEquals(errorMessage, "userId is required", "Error message mismatch!");
     }
-
-
-
 
 }

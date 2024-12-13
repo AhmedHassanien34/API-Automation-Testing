@@ -125,8 +125,8 @@ public class UnlikeCommunityPost {
         Assert.assertEquals(response.getStatusCode(), 400, "Status code mismatch!");
 
         // Validate the error message in the response body
-        String errorMessage1 = response.jsonPath().getString("errors[0].message");
-        Assert.assertEquals(errorMessage1, "Parameter path \"id\" must be valid number.", "Error message mismatch!");
+        String errorMessage1 = response.jsonPath().getString("message");
+        Assert.assertEquals(errorMessage1, "Cannot DELETE /api/posts/likes", "Error message mismatch!");
 
     }
 

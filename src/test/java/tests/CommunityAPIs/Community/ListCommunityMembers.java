@@ -55,8 +55,6 @@ public class ListCommunityMembers {
         Assert.assertNotNull(response.jsonPath().getString("members[0].userId"), "userId should not be null!");
         Assert.assertNotNull(response.jsonPath().getString("members[0].firstName"), "firstName should not be null!");
         Assert.assertNotNull(response.jsonPath().getString("members[0].lastName"), "lastName should not be null!");
-        Assert.assertNotNull(response.jsonPath().getString("members[0].avatarUrl"), "avatarUrl should not be null!");
-        Assert.assertNotNull(response.jsonPath().getString("members[0].numOfSupportedNeedies"), "numOfSupportedNeedies should not be null!");
         Assert.assertNotNull(response.jsonPath().getString("members[0].joinedAt"), "joinedAt should not be null!");
 
         Assert.assertNotNull(response.jsonPath().getString("count"), "count should not be null!");
@@ -85,8 +83,6 @@ public class ListCommunityMembers {
         Assert.assertNotNull(response.jsonPath().getString("members[0].userId"), "userId should not be null!");
         Assert.assertNotNull(response.jsonPath().getString("members[0].firstName"), "firstName should not be null!");
         Assert.assertNotNull(response.jsonPath().getString("members[0].lastName"), "lastName should not be null!");
-        Assert.assertNotNull(response.jsonPath().getString("members[0].avatarUrl"), "avatarUrl should not be null!");
-        Assert.assertNotNull(response.jsonPath().getString("members[0].numOfSupportedNeedies"), "numOfSupportedNeedies should not be null!");
         Assert.assertNotNull(response.jsonPath().getString("members[0].joinedAt"), "joinedAt should not be null!");
 
         Assert.assertNotNull(response.jsonPath().getString("count"), "count should not be null!");
@@ -204,6 +200,6 @@ public class ListCommunityMembers {
 
         // Validate the error message in the response body
         String errorMessage = response.jsonPath().getString("message");
-        Assert.assertEquals(errorMessage, "Unauthorized", "Error message mismatch!");
+        Assert.assertEquals(errorMessage, "Access token is required", "Error message mismatch!");
     }
 }

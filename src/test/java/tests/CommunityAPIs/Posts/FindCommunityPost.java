@@ -13,7 +13,7 @@ import java.util.Map;
 
 public class FindCommunityPost {
 
-    String addCommunityPost;
+    AddCommunityPost addCommunityPost  = new AddCommunityPost();
 
     private String authToken;
     public static String PostId;
@@ -39,13 +39,11 @@ public class FindCommunityPost {
     @Test(priority = 1)
     public void FindCommunityPostSuccessfullyTest() throws IOException {
 
-        addCommunityPost = "48";
-
         // Send POST request
         Response response = RestAssured.given()
                 .header("Authorization", "Bearer " + authToken)
                 .contentType(ContentType.JSON)
-                .get("/api/posts/" + addCommunityPost); // Replace with actual endpoint
+                .get("/api/posts/" + addCommunityPost.PostId); // Replace with actual endpoint
 
         // Validate response
         Assert.assertEquals(response.getStatusCode(), 200, "Status code mismatch!");
@@ -55,26 +53,26 @@ public class FindCommunityPost {
         Assert.assertNotNull(response.jsonPath().getString("isModeratorPost"), "isModeratorPost should not be null!");
         Assert.assertNotNull(response.jsonPath().getString("communityId"), "communityId should not be null!");
         Assert.assertNotNull(response.jsonPath().getString("userId"), "userId should not be null!");
-        Assert.assertNotNull(response.jsonPath().getString("postContent"), "postContent should not be null!");
+        Assert.assertNotNull(response.jsonPath().getString("postText"), "postText should not be null!");
         Assert.assertNotNull(response.jsonPath().getString("attachments"), "attachments should not be null!");
         Assert.assertNotNull(response.jsonPath().getString("userFirstName"), "userFirstName should not be null!");
         Assert.assertNotNull(response.jsonPath().getString("userLastName"), "userLastName should not be null!");
         Assert.assertNotNull(response.jsonPath().getString("userPicture"), "userPicture should not be null!");
         Assert.assertNotNull(response.jsonPath().getString("numOfLikes"), "numOfLikes should not be null!");
         Assert.assertNotNull(response.jsonPath().getString("numOfComments"), "numOfComments should not be null!");
-        Assert.assertNotNull(response.jsonPath().getString("postDate"), "postDate should not be null!");
+        Assert.assertNotNull(response.jsonPath().getString("createdAt"), "createdAt should not be null!");
 
     }
 
     @Test(priority = 2)
     public void FindCommunityPostWithInvalidPostId() throws IOException {
 
-        addCommunityPost = "abc";
+        addCommunityPost.PostId = "abc";
         // Send POST request
         Response response = RestAssured.given()
                 .header("Authorization", "Bearer " + authToken)
                 .contentType(ContentType.JSON)
-                .get("/api/posts/" + addCommunityPost); // Replace with actual endpoint
+                .get("/api/posts/" + addCommunityPost.PostId ); // Replace with actual endpoint
 
         // Validate response
         Assert.assertEquals(response.getStatusCode(), 400, "Status code mismatch!");
@@ -87,14 +85,14 @@ public class FindCommunityPost {
     @Test(priority = 3)
     public void FindCommunityPostWithNonExistPostId() throws IOException {
 
-        addCommunityPost = "99999";
+        addCommunityPost.PostId = "99999";
 
 
         // Send POST request
         Response response = RestAssured.given()
                 .header("Authorization", "Bearer " + authToken)
                 .contentType(ContentType.JSON)
-                .get("/api/posts/" + addCommunityPost); // Replace with actual endpoint
+                .get("/api/posts/" + addCommunityPost.PostId ); // Replace with actual endpoint
 
         // Validate response
         Assert.assertEquals(response.getStatusCode(), 404, "Status code mismatch!");
@@ -107,12 +105,10 @@ public class FindCommunityPost {
     @Test(priority = 4)
     public void FindCommunityPostWithMissingTokenTest() throws IOException {
 
-        addCommunityPost = "48";
-
         // Send POST request
         Response response = RestAssured.given()
                 .contentType(ContentType.JSON)
-                .get("/api/posts/" + addCommunityPost); // Replace with actual endpoint
+                .get("/api/posts/" + addCommunityPost.PostId ); // Replace with actual endpoint
 
         // Validate response
         Assert.assertEquals(response.getStatusCode(), 401, "Status code mismatch!");

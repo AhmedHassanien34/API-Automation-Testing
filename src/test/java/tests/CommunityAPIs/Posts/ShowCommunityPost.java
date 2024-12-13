@@ -62,8 +62,13 @@ public class ShowCommunityPost {
             Assert.assertNotNull(response.jsonPath().getString("posts[0].isModeratorPost"), "isModeratorPost should not be null!");
             Assert.assertNotNull(response.jsonPath().getString("posts[0].isPinned"), "isPinned should not be null!");
             Assert.assertNotNull(response.jsonPath().getString("posts[0].postContent"), "postContent should not be null!");
+            Assert.assertNotNull(response.jsonPath().getString("posts[0].attachments[0].filename"), "filename should not be null!");
+            Assert.assertNotNull(response.jsonPath().getString("posts[0].attachments[0].filetype"), "filetype should not be null!");
+            Assert.assertNotNull(response.jsonPath().getString("posts[0].attachments[0].filepath"), "filepath not be null!");
+            Assert.assertNotNull(response.jsonPath().getString("posts[0].attachments[0].size"), "size should not be null!");
             Assert.assertNotNull(response.jsonPath().getString("posts[0].postDate"), "postDate should not be null!");
             Assert.assertNotNull(response.jsonPath().getString("posts[0].userId"), "userId should not be null!");
+            Assert.assertNotNull(response.jsonPath().getString("posts[0].attachments[0].filetype"), "filetype should not be null!");
             Assert.assertNotNull(response.jsonPath().getString("posts[0].userFirstName"), "userFirstName not be null!");
             Assert.assertNotNull(response.jsonPath().getString("posts[0].userLastName"), "userLastName should not be null!");
             Assert.assertNotNull(response.jsonPath().getString("posts[0].userPicture"), "userPicture should not be null!");
@@ -142,7 +147,7 @@ public class ShowCommunityPost {
     @Test(priority = 5)
     public void ShowCommunityPostWithNoPostsAreAvailableTest() throws IOException {
 
-        CommunityPosts = "1";
+        CommunityPosts = "2";
         PageSize = "10";
         page = "1";
 
@@ -158,14 +163,16 @@ public class ShowCommunityPost {
         // Validate response
         Assert.assertEquals(response.getStatusCode(), 200, "Status code mismatch!");
 
-
+        // Validate the error message in the response body
+        String errorMessage1 = response.jsonPath().getString("count");
+        Assert.assertEquals(errorMessage1, "0", "Error message mismatch!");
 
     }
 
     @Test(priority = 6)
     public void ShowCommunityPostWithZeroPageSizeTest() throws IOException {
 
-        CommunityPosts = "28";
+        CommunityPosts = "2";
         PageSize = "0";
         page = "1";
 
@@ -194,7 +201,7 @@ public class ShowCommunityPost {
     @Test(priority = 7)
     public void ShowCommunityPostWithNonNumericPageAndPageSizeTest() throws IOException {
 
-        CommunityPosts = "28";
+        CommunityPosts = "2";
         PageSize = "abc";
         page = "xyz";
 
@@ -230,7 +237,7 @@ public class ShowCommunityPost {
     @Test(priority = 8)
     public void ShowCommunityPostWithPageNumberExceedsAvailablePagesTest() throws IOException {
 
-        CommunityPosts = "28";
+        CommunityPosts = "2";
         PageSize = "10";
         page = "100";
 
@@ -250,7 +257,7 @@ public class ShowCommunityPost {
     @Test(priority = 9)
     public void ShowCommunityPostWithPageSizeNumberExceedsAllowedTheMaximumNumberTest() throws IOException {
 
-        CommunityPosts = "1";
+        CommunityPosts = "2";
         PageSize = "1000";
         page = "1";
 
@@ -278,7 +285,7 @@ public class ShowCommunityPost {
     @Test(priority = 10)
     public void ShowCommunityPostWithNoPageSizeNumberAndPageNumberTest() throws IOException {
 
-        CommunityPosts = "1";
+        CommunityPosts = "2";
 
         // Send POST request
         Response response = RestAssured.given()

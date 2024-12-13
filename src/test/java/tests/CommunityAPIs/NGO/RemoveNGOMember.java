@@ -3,7 +3,6 @@ package tests.CommunityAPIs.NGO;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.testng.Assert;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import utils.RestClient;
@@ -18,9 +17,9 @@ public class RemoveNGOMember {
 
     private String authToken;
 
-    @BeforeClass
+    @BeforeTest
     public void ValidEmailandValidPasswordLogin() throws IOException {
-        Map<String, Object> requestBody = RestClient.getTestData("ValidEmailandPassword+3@");
+        Map<String, Object> requestBody = RestClient.getTestData("ValidEmailandPassword");
 
         // Send POST request to register endpoint
         Response response = RestClient.postRequest("/api/auth/login", requestBody);
@@ -40,7 +39,7 @@ public class RemoveNGOMember {
 
         // Set the Community ID and User ID as path and query parameters
         String communityId = "28";
-        String userId = "96";
+        String userId = "31";
 
         // Sending POST request
         Response response = given()
@@ -52,7 +51,7 @@ public class RemoveNGOMember {
 
 
         // Validating response
-        Assert.assertEquals(response.getStatusCode(), 200);
+        Assert.assertEquals(response.getStatusCode(), 201);
 
     }
 
@@ -145,7 +144,7 @@ public class RemoveNGOMember {
 
         // Validate the error message in the response body
         String errorMessage = response.jsonPath().getString("errors[0].message");
-        Assert.assertEquals(errorMessage, "Parameter path \"id\" must be valid number.", "Error message mismatch!");
+        Assert.assertEquals(errorMessage, "MemberUserId is required and must be a number.", "Error message mismatch!");
     }
 
     @Test(priority = 6)

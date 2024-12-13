@@ -15,7 +15,6 @@ public class ConfirmJoiningCommunity {
 
     private String authToken;
 
-
     @BeforeTest
     public void ValidEmailandValidPasswordLogin() throws IOException {
         Map<String, Object> requestBody = RestClient.getTestData("ValidEmailandPassword");
@@ -201,7 +200,7 @@ public class ConfirmJoiningCommunity {
 
         // Validate the error message in the response body
         String errorMessage = response.jsonPath().getString("message");
-        Assert.assertEquals(errorMessage, "Unauthorized", "Error message mismatch!");
+        Assert.assertEquals(errorMessage, "Access token is required", "Error message mismatch!");
     }
 
 

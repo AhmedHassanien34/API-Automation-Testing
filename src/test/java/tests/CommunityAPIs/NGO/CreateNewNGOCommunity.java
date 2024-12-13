@@ -4,8 +4,8 @@ import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.testng.Assert;
-import org.testng.annotations.*;
-import tests.CommunityAPIs.Community.CreateNewCommunity;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
 import utils.RestClient;
 
 import java.io.IOException;
@@ -15,10 +15,7 @@ public class CreateNewNGOCommunity {
 
     private String authToken;
 
-    private String VerifyingNGOId;
-    private String CreatingNGOId;
-
-    @BeforeClass
+    @BeforeTest
     public void ValidEmailandValidPasswordLogin() throws IOException {
         Map<String, Object> requestBody = RestClient.getTestData("ValidEmailandPassword");
 
@@ -226,31 +223,6 @@ public class CreateNewNGOCommunity {
         // Validate the error message in the response body
         String errorMessage = response.jsonPath().getString("errors[0].message");
         Assert.assertEquals(errorMessage, "Name must be at most 50 characters long", "Error message mismatch!");
-    }
-
-
-    @AfterClass
-    public void DeleteCreatingNGOSuccessfullyTest() throws IOException {
-
-        // Send POST request
-        Response response = RestAssured.given()
-                .header("Authorization", "Bearer " + authToken)
-                .contentType(ContentType.JSON)
-                .delete ("/api/communities/" + VerifyingNGOId ); // Replace with actual endpoint
-
-        // Validate response
-        Assert.assertEquals(response.getStatusCode(), 200, "Status code mismatch!");
-
-        // Send POST request
-        Response response2 = RestAssured.given()
-                .header("Authorization", "Bearer " + authToken)
-                .contentType(ContentType.JSON)
-                .delete ("/api/communities/" + CreatingNGOId ); // Replace with actual endpoint
-
-        // Validate response
-        Assert.assertEquals(response2.getStatusCode(), 200, "Status code mismatch!");
-
-
     }
 
 }

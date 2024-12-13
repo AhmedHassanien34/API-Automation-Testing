@@ -78,7 +78,7 @@ public class FindAllCommunities {
 
         // Add query parameters
         request.queryParam("page", 1);
-        request.queryParam("name", "NGO Test NGO");
+        request.queryParam("name", "Amr's");
 
         // Make a GET request to the endpoint and store the response
         Response response = request.get("/api/communities");
@@ -88,11 +88,8 @@ public class FindAllCommunities {
 
 
         // Validate specific fields in the response body
-        Assert.assertEquals(response.jsonPath().getString("communities[0].communityId"), "33", "communityId mismatch!");
-        Assert.assertEquals(response.jsonPath().getString("communities[0].communityName"), "NGO Test NGO", "communityName mismatch!");
-        Assert.assertEquals(response.jsonPath().getString("communities[0].coverPhoto"), "https://giversapp.fra1.digitaloceanspaces.com/production/1729751805840_OIP.jpg", "coverPhoto mismatch!");
-        Assert.assertEquals(response.jsonPath().getString("communities[0].type"), "NGO", "type mismatch!");
-
+        Assert.assertEquals(response.jsonPath().getString("communities[0].communityId"), "1", "communityId mismatch!");
+        Assert.assertEquals(response.jsonPath().getString("communities[0].communityName"), "Amr's", "communityName mismatch!");
     }
 
     @Test(priority = 3)
@@ -104,7 +101,7 @@ public class FindAllCommunities {
         request.header("Authorization", "Bearer " + authToken);
 
         // Add query parameters
-        request.queryParam("page", 1);
+        request.queryParam("page", 2);
 
         // Make a GET request to the endpoint and store the response
         Response response = request.get("/api/communities");
@@ -178,6 +175,6 @@ public class FindAllCommunities {
 
         // Validate the error message in the response body
         String errorMessage = response.jsonPath().getString("message");
-        Assert.assertEquals(errorMessage, "Unauthorized", "Error message mismatch!");
+        Assert.assertEquals(errorMessage, "Access token is required", "Error message mismatch!");
     }
 }

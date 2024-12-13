@@ -48,19 +48,19 @@ public class FindMyCommunities {
         response.then().statusCode(200);
 
         // Validate specific fields in the response body
-        Assert.assertNotNull(response.jsonPath().getString("data[0].communityId"), "communityId should not be null!");
-        Assert.assertNotNull(response.jsonPath().getString("data[0].communityName"), "communityName should not be null!");
+        Assert.assertNotNull(response.jsonPath().getString("[0].communityId"), "communityId should not be null!");
+        Assert.assertNotNull(response.jsonPath().getString("[0].communityName"), "communityName should not be null!");
 //        Assert.assertNotNull(response.jsonPath().getString("[0].type"), "type should not be null!");
-        Assert.assertNotNull(response.jsonPath().getString("data[0].membersCount"), "membersCount should not be null!");
-        Assert.assertNotNull(response.jsonPath().getString("data[0].followersCount"), "followersCount should not be null!");
+        Assert.assertNotNull(response.jsonPath().getString("[0].membersCount"), "membersCount should not be null!");
+        Assert.assertNotNull(response.jsonPath().getString("[0].followersCount"), "followersCount should not be null!");
 //        Assert.assertNotNull(response.jsonPath().getString("[0].donationsCount"), "donationsCount should not be null!");
-        Assert.assertNotNull(response.jsonPath().getString("data[0].neediesSupportedCount"), "neediesSupportedCount should not be null!");
-        Assert.assertNotNull(response.jsonPath().getString("data[0].createdByUserId"), "createdByUserId should not be null!");
-        Assert.assertNotNull(response.jsonPath().getString("data[0].createdByFirstName"), "membersCount should not be null!");
-        Assert.assertNotNull(response.jsonPath().getString("data[0].createdByLastname"), "followersCount should not be null!");
+        Assert.assertNotNull(response.jsonPath().getString("[0].neediesSupportedCount"), "neediesSupportedCount should not be null!");
+        Assert.assertNotNull(response.jsonPath().getString("[0].createdByUserId"), "createdByUserId should not be null!");
+        Assert.assertNotNull(response.jsonPath().getString("[0].createdByFirstName"), "membersCount should not be null!");
+        Assert.assertNotNull(response.jsonPath().getString("[0].createdByLastname"), "followersCount should not be null!");
 //        Assert.assertNotNull(response.jsonPath().getString("[0].isMember"), "isMember should not be null!");
 //        Assert.assertNotNull(response.jsonPath().getString("[0].isFollower"), "isFollower should not be null!");
-        Assert.assertNotNull(response.jsonPath().getString("data    [0].avatars"), "avatars should not be null!");
+        Assert.assertNotNull(response.jsonPath().getString("[0].avatars"), "avatars should not be null!");
 
     }
 
@@ -82,6 +82,9 @@ public class FindMyCommunities {
 
         // Validate the response status code
         response.then().statusCode(200);
+
+        // Validate specific fields in the response body
+        response.then().body("communities.size()", equalTo(10));
 
     }
 
@@ -124,6 +127,9 @@ public class FindMyCommunities {
 
         // Validate the response status code
         response.then().statusCode(200);
+
+        // Validate specific fields in the response body
+        response.then().body("communities.size()", equalTo(0));
 
     }
 

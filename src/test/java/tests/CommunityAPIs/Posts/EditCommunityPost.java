@@ -13,7 +13,7 @@ import java.util.Map;
 
 public class EditCommunityPost {
 
-    String PostId;
+    AddCommunityPost addCommunityPost  = new AddCommunityPost();
 
     private String authToken;
 
@@ -38,8 +38,6 @@ public class EditCommunityPost {
     @Test(priority = 1)
     public void EditCommunityPostSuccessfullyTest() throws IOException {
 
-        PostId  = "48";
-
         Map<String, Object> requestBody = RestClient.getTestData("ValidEditionCommunityPost");
 
         // Send POST request
@@ -47,7 +45,7 @@ public class EditCommunityPost {
                 .header("Authorization", "Bearer " + authToken)
                 .contentType(ContentType.JSON)
                 .body(requestBody)
-                .patch("/api/posts/" + PostId ); // Replace with actual endpoint
+                .patch("/api/posts/" + addCommunityPost.PostId ); // Replace with actual endpoint
 
         // Validate response
         Assert.assertEquals(response.getStatusCode(), 200, "Status code mismatch!");
@@ -55,9 +53,6 @@ public class EditCommunityPost {
 
     @Test(priority = 2)
     public void AddCommunityPostWithInvalidMediaFileFormatTest() throws IOException {
-
-        PostId  = "48";
-
         // Get test data for valid registration
         Map<String, Object> requestBody = RestClient.getTestData("EditCommunityPostWithInvalidMediaFileFormat");
 
@@ -66,7 +61,7 @@ public class EditCommunityPost {
                 .header("Authorization", "Bearer " + authToken)
                 .contentType(ContentType.JSON)
                 .body(requestBody)
-                .patch("/api/posts/" + PostId ); // Replace with actual endpoint
+                .patch("/api/posts/" + addCommunityPost.PostId ); // Replace with actual endpoint
 
         // Validate response
         Assert.assertEquals(response.getStatusCode(), 400, "Status code mismatch!");
@@ -88,9 +83,6 @@ public class EditCommunityPost {
 
     @Test(priority = 3)
     public void AddCommunityPostWithInvalidMediaFilePathTest() throws IOException {
-
-        PostId  = "48";
-
         // Get test data for valid registration
         Map<String, Object> requestBody = RestClient.getTestData("EditCommunityPostWithInvalidMediaFilePath");
 
@@ -99,7 +91,7 @@ public class EditCommunityPost {
                 .header("Authorization", "Bearer " + authToken)
                 .contentType(ContentType.JSON)
                 .body(requestBody)
-                .patch("/api/posts/" + PostId ); // Replace with actual endpoint
+                .patch("/api/posts/" + addCommunityPost.PostId ); // Replace with actual endpoint
 
         // Validate response
         Assert.assertEquals(response.getStatusCode(), 400, "Status code mismatch!");
@@ -118,12 +110,8 @@ public class EditCommunityPost {
 
     }
 
-    /* //Bug
     @Test(priority = 4)
     public void AddCommunityPostWithEmptyBodyTest() throws IOException {
-
-        PostId  = "48";
-
         // Get test data for valid registration
         Map<String, Object> requestBody = RestClient.getTestData("EditCommunityPostWithEmptyBody");
 
@@ -132,7 +120,7 @@ public class EditCommunityPost {
                 .header("Authorization", "Bearer " + authToken)
                 .contentType(ContentType.JSON)
                 .body(requestBody)
-                .patch("/api/posts/" + PostId ); // Replace with actual endpoint
+                .patch("/api/posts/" + addCommunityPost.PostId ); // Replace with actual endpoint
 
         System.out.println("Response Body: " + response.getBody().asString());
 
@@ -140,12 +128,9 @@ public class EditCommunityPost {
         Assert.assertEquals(response.getStatusCode(), 200, "Status code mismatch!");
 
     }
-*/
+
     @Test(priority = 5)
     public void AddCommunityPostWithNoMediaTest() throws IOException {
-
-        PostId  = "48";
-
         // Get test data for valid registration
         Map<String, Object> requestBody = RestClient.getTestData("EditCommunityPostWithNoMedia");
 
@@ -154,9 +139,9 @@ public class EditCommunityPost {
                 .header("Authorization", "Bearer " + authToken)
                 .contentType(ContentType.JSON)
                 .body(requestBody)
-                .patch("/api/posts/" + PostId ); // Replace with actual endpoint
+                .patch("/api/posts/" + addCommunityPost.PostId ); // Replace with actual endpoint
 
-        System.out.println("Response Body: " + PostId + "  " + response.getBody().asString());
+        System.out.println("Response Body: " + addCommunityPost.PostId + "  " + response.getBody().asString());
 
         // Validate response
         Assert.assertEquals(response.getStatusCode(), 200, "Status code mismatch!");
@@ -165,9 +150,6 @@ public class EditCommunityPost {
 
     @Test(priority = 6)
     public void AddCommunityPostWithLargePostContentTest() throws IOException {
-
-        PostId  = "48";
-
         // Get test data for valid registration
         Map<String, Object> requestBody = RestClient.getTestData("EditCommunityPostWithLargePostContent");
 
@@ -176,7 +158,7 @@ public class EditCommunityPost {
                 .header("Authorization", "Bearer " + authToken)
                 .contentType(ContentType.JSON)
                 .body(requestBody)
-                .patch("/api/posts/" + PostId ); // Replace with actual endpoint
+                .patch("/api/posts/" + addCommunityPost.PostId ); // Replace with actual endpoint
 
         // Validate response
         Assert.assertEquals(response.getStatusCode(), 400, "Status code mismatch!");
@@ -186,7 +168,7 @@ public class EditCommunityPost {
     @Test(priority = 7)
     public void EditCommunityPostWithPostInDifferentCommunity() throws IOException {
 
-       PostId = "11";
+        addCommunityPost.PostId = "11";
 
         Map<String, Object> requestBody = RestClient.getTestData("ValidEditionCommunityPost");
 
@@ -195,7 +177,7 @@ public class EditCommunityPost {
                 .header("Authorization", "Bearer " + authToken)
                 .contentType(ContentType.JSON)
                 .body(requestBody)
-                .patch("/api/posts/" + PostId ); // Replace with actual endpoint
+                .patch("/api/posts/" + addCommunityPost.PostId ); // Replace with actual endpoint
 
         // Validate response
         Assert.assertEquals(response.getStatusCode(), 403, "Status code mismatch!");
@@ -230,7 +212,7 @@ public class EditCommunityPost {
     @Test(priority = 9)
     public void EditCommunityPostWithNonOwnerThePost() throws IOException {
 
-        PostId = "43";
+        addCommunityPost.PostId = "43";
 
         Map<String, Object> requestBody = RestClient.getTestData("ValidEditionCommunityPost");
 
@@ -239,7 +221,7 @@ public class EditCommunityPost {
                 .header("Authorization", "Bearer " + authToken)
                 .contentType(ContentType.JSON)
                 .body(requestBody)
-                .patch("/api/posts/" + PostId ); // Replace with actual endpoint
+                .patch("/api/posts/" + addCommunityPost.PostId ); // Replace with actual endpoint
 
         // Validate response
         Assert.assertEquals(response.getStatusCode(), 403, "Status code mismatch!");
@@ -254,13 +236,13 @@ public class EditCommunityPost {
 
         Map<String, Object> requestBody = RestClient.getTestData("ValidEditionCommunityPost");
 
-        PostId = "abc";
+        addCommunityPost.PostId = "abc";
         // Send POST request
         Response response = RestAssured.given()
                 .header("Authorization", "Bearer " + authToken)
                 .contentType(ContentType.JSON)
                 .body(requestBody)
-                .patch("/api/posts/" + PostId ); // Replace with actual endpoint
+                .patch("/api/posts/" + addCommunityPost.PostId ); // Replace with actual endpoint
 
         // Validate response
         Assert.assertEquals(response.getStatusCode(), 400, "Status code mismatch!");
@@ -273,7 +255,7 @@ public class EditCommunityPost {
     @Test(priority = 11)
     public void EditCommunityPostWithNonExistPostId() throws IOException {
 
-        PostId = "99999";
+        addCommunityPost.PostId = "99999";
 
         Map<String, Object> requestBody = RestClient.getTestData("ValidEditionCommunityPost");
 
@@ -282,7 +264,7 @@ public class EditCommunityPost {
                 .header("Authorization", "Bearer " + authToken)
                 .contentType(ContentType.JSON)
                 .body(requestBody)
-                .patch("/api/posts/" + PostId ); // Replace with actual endpoint
+                .patch("/api/posts/" + addCommunityPost.PostId ); // Replace with actual endpoint
 
         // Validate response
         Assert.assertEquals(response.getStatusCode(), 404, "Status code mismatch!");
@@ -301,7 +283,7 @@ public class EditCommunityPost {
         Response response = RestAssured.given()
                 .contentType(ContentType.JSON)
                 .body(requestBody)
-                .patch("/api/posts/" + PostId ); // Replace with actual endpoint
+                .patch("/api/posts/" + addCommunityPost.PostId ); // Replace with actual endpoint
 
         // Validate response
         Assert.assertEquals(response.getStatusCode(), 401, "Status code mismatch!");

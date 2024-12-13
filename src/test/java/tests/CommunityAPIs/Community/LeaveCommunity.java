@@ -37,7 +37,7 @@ public class LeaveCommunity {
     @Test(priority = 1)
     public void SuccessfullyLeaveCommunityTest() throws IOException {
 
-        String CommunityId = "69";
+        String CommunityId = "1";
 
         // Send POST request
         Response response = RestAssured.given()
@@ -94,7 +94,7 @@ public class LeaveCommunity {
     @Test(priority = 4)
     public void LeaveCommunityWithMemberAlreadyLeftCommunityTest() throws IOException {
         // Get test data for valid registration
-        String CommunityId = "69";
+        String CommunityId = "1";
 
         // Send POST request
         Response response = RestAssured.given()
@@ -125,7 +125,7 @@ public class LeaveCommunity {
 
         // Validate the error message in the response body
         String errorMessage = response.jsonPath().getString("message");
-        Assert.assertEquals(errorMessage, "Unauthorized", "Error message mismatch!");
+        Assert.assertEquals(errorMessage, "Access token is required", "Error message mismatch!");
     }
 
     @Test(priority = 6)
