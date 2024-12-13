@@ -56,6 +56,11 @@
     "password": "Givers123"
   },
 
+  "ValidEmailandPassword+3@" : {
+    "email": "hassaniengivers+3@gmail.com",
+    "password": "Ahmed#123"
+  },
+
   "UserIsnotExistLogin" : {
     "email": "hassaniengivers+888778@gmail.com",
     "password": "Givers123"
@@ -200,13 +205,13 @@
   },
 
   "ValidVerifyingCreationNGO" : {
-    "name": "RestAssured Verifying NGO NGO NGO NGO",
+    "name": "RestAssured Verifying NGO NGO NGO NGO Ahmed",
     "type": 1,
     "coverPhoto": "https://giversapp.fra1.digitaloceanspaces.com/production/1729751805840_OIP.jpg"
   },
 
   "ValidCreatingCreationNGO" : {
-    "name": "RestAssured Creating NGO NGO NGO NGO",
+    "name": "RestAssured Creating NGO NGO NGO NGO Ahmed",
     "type": 2,
     "coverPhoto": "https://giversapp.fra1.digitaloceanspaces.com/production/1729751805840_OIP.jpg"
   },

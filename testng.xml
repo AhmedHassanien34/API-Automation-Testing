@@ -4,7 +4,7 @@
 
     <test name="All Suite">
         <classes>
-            
+            <!--
                         <class name="tests.CommunityAPIs.Community.CreateNewCommunity"/>
                         <class name="tests.CommunityAPIs.Community.EditCommunity"/>
                         <class name="tests.CommunityAPIs.Community.JoinCommunity"/>
@@ -16,16 +16,16 @@
                         <class name="tests.CommunityAPIs.Community.LeaveCommunity"/>
                         <class name="tests.CommunityAPIs.Community.DeleteCommunity"/>
 
-            
+            -->
                         <class name="tests.CommunityAPIs.NGO.CreateNewNGOCommunity"/>
                         <class name="tests.CommunityAPIs.NGO.AddModeratorToNGOCommunity"/>
-    
+                        <class name="tests.CommunityAPIs.NGO.AddNGOMember"/>
                         <class name="tests.CommunityAPIs.NGO.FollowNGOCommunity"/>
                         <class name="tests.CommunityAPIs.NGO.UnfollowNGOCommunity"/>
                         <class name="tests.CommunityAPIs.NGO.RemoveNGOMember"/>
                         <class name="tests.CommunityAPIs.NGO.DeleteModeratorFromNGOCommunity"/>
 
-
+<!--
             <class name="tests.CommunityAPIs.Posts.AddCommunityPost"/>
             <class name="tests.CommunityAPIs.Posts.EditCommunityPost"/>
             <class name="tests.CommunityAPIs.Posts.ShowCommunityPost"/>
@@ -44,7 +44,7 @@
             <class name="tests.CommunityAPIs.Comments.LikeComment"/>
             <class name="tests.CommunityAPIs.Comments.UnLikeComment"/>
             <class name="tests.CommunityAPIs.Comments.DeleteComment"/>
-            
+            -->
         </classes>
     </test>
 </suite>

@@ -3,6 +3,7 @@ package tests.CommunityAPIs.NGO;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import utils.RestClient;
@@ -17,9 +18,9 @@ public class RemoveNGOMember {
 
     private String authToken;
 
-    @BeforeTest
+    @BeforeClass
     public void ValidEmailandValidPasswordLogin() throws IOException {
-        Map<String, Object> requestBody = RestClient.getTestData("ValidEmailandPassword");
+        Map<String, Object> requestBody = RestClient.getTestData("ValidEmailandPassword+3@");
 
         // Send POST request to register endpoint
         Response response = RestClient.postRequest("/api/auth/login", requestBody);
@@ -39,7 +40,7 @@ public class RemoveNGOMember {
 
         // Set the Community ID and User ID as path and query parameters
         String communityId = "28";
-        String userId = "31";
+        String userId = "96";
 
         // Sending POST request
         Response response = given()
