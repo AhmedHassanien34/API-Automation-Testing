@@ -66,31 +66,6 @@
 
 
 
-            <!--
-
-
-
-
-
-
-            <class name="tests.NeedyAPIs.PushDraftChanges"/>
-            <class name="tests.NeedyAPIs.PullDraftChanges"/>
-            <class name="tests.NeedyAPIs.CreateNeedySubmission"/>
-            <class name="tests.NeedyAPIs.UpdateNeedySubmission"/>
-            <class name="tests.NeedyAPIs.GetNeedySubmissionForVerification"/>
-            <class name="tests.NeedyAPIs.GetUserNeedies"/>
-            <class name="tests.NeedyAPIs.StartNeedyVerification"/>
-            <class name="tests.NeedyAPIs.StopNeedyVerification"/>
-            <class name="tests.NeedyAPIs.ApproveNeedySubmission"/>
-            <class name="tests.NeedyAPIs.RejectNeedySubmission"/>
-            <class name="tests.NeedyAPIs.ReturnNeedySubmission"/>
-            <class name="tests.NeedyAPIs.GetPrposedDonation"/>
-
-
- <!--
-
-
-                        -->
         </classes>
     </test>
 </suite>
