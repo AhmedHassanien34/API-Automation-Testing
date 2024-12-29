@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Regression Suite">
+
+    <test name="All Suite">
+        <classes>
+
+
+
+           <class name="tests.AuthenticationAPIs.RegisterApiTest"/>
+           <class name="tests.AuthenticationAPIs.ResendOTPApiTest"/>
+           <class name="tests.AuthenticationAPIs.VerifyOtpApiTest"/>
+           <class name="tests.AuthenticationAPIs.ReturnAccessTokenValify"/>
+           <class name="tests.AuthenticationAPIs.GetNationalIdFromValify"/>
+           <class name="tests.AuthenticationAPIs.DeleteNationalID"/>
+           <class name="tests.AuthenticationAPIs.DeleteUserAPiTest"/>
+           <class name="tests.AuthenticationAPIs.ResetPasswordApiTest"/>
+           <class name="tests.AuthenticationAPIs.ResetPasswordConfirmApiTest"/>
+           <class name="tests.AuthenticationAPIs.LoginApiTest"/>
+           <class name="tests.AuthenticationAPIs.LogoutApiTest"/>
+           <class name="tests.AuthenticationAPIs.RefreshTokenApiTest"/>
+
+           <class name="tests.CommunityAPIs.Community.CreateNewCommunity"/>
+           <class name="tests.CommunityAPIs.Community.JoinCommunity"/>
+           <class name="tests.CommunityAPIs.Community.ConfirmJoiningCommunity"/>
+           <class name="tests.CommunityAPIs.Community.FindAllCommunities"/>
+           <class name="tests.CommunityAPIs.Community.FindMyCommunities"/>
+           <class name="tests.CommunityAPIs.Community.ShowCommunityDetails"/>
+           <class name="tests.CommunityAPIs.Community.ListCommunityMembers"/>
+           <class name="tests.CommunityAPIs.Community.LeaveCommunity"/>
+           <class name="tests.CommunityAPIs.Community.DeleteCommunity"/>
+
+            <class name="tests.CommunityAPIs.Posts.AddCommunityPost"/>
+            <class name="tests.CommunityAPIs.Posts.EditCommunityPost"/>
+            <class name="tests.CommunityAPIs.Posts.ShowCommunityPost"/>
+            <class name="tests.CommunityAPIs.Posts.FindCommunityPost"/>
+            <class name="tests.CommunityAPIs.Posts.ReportCommunityPost"/>
+            <class name="tests.CommunityAPIs.Posts.GetPostReports"/>
+            <class name="tests.CommunityAPIs.Posts.LikeCommunityPost"/>
+            <class name="tests.CommunityAPIs.Posts.UnlikeCommunityPost"/>
+            <class name="tests.CommunityAPIs.Posts.FindCommunityPostLike"/>
+            <class name="tests.CommunityAPIs.Posts.DeleteCommunityPost"/>
+
+
+            <class name="tests.CommunityAPIs.Comments.AddComment"/>
+            <class name="tests.CommunityAPIs.Comments.EditComment"/>
+            <class name="tests.CommunityAPIs.Comments.ShowComment"/>
+            <class name="tests.CommunityAPIs.Comments.ReportComment"/>
+            <class name="tests.CommunityAPIs.Comments.LikeComment"/>
+            <class name="tests.CommunityAPIs.Comments.UnLikeComment"/>
+            <class name="tests.CommunityAPIs.Comments.DeleteComment"/>
+
+            <class name="tests.CommunityAPIs.NGO.CreateNewNGOCommunity"/>
+            <class name="tests.CommunityAPIs.NGO.ShowNGOMembers"/>
+            <class name="tests.CommunityAPIs.NGO.AddModeratorToNGOCommunity"/>
+            <class name="tests.CommunityAPIs.NGO.FollowNGOCommunity"/>
+            <class name="tests.CommunityAPIs.NGO.UnfollowNGOCommunity"/>
+            <class name="tests.CommunityAPIs.NGO.DeleteModeratorFromNGOCommunity"/>
+            <class name="tests.CommunityAPIs.NGO.EditNGOCommunity"/>
+            <class name="tests.CommunityAPIs.NGO.SendNGOMemberInvitation"/>
+            <class name="tests.CommunityAPIs.NGO.AcceptNGOMemberInvitation"/>
+            <class name="tests.CommunityAPIs.NGO.RejectNGOMemberInvitation"/>
+            <class name="tests.CommunityAPIs.NGO.RemoveNGOMember"/>
+
+
+
+
+
+            <!--
+
+
+
+
+
+
+            <class name="tests.NeedyAPIs.PushDraftChanges"/>
+            <class name="tests.NeedyAPIs.PullDraftChanges"/>
+            <class name="tests.NeedyAPIs.CreateNeedySubmission"/>
+            <class name="tests.NeedyAPIs.UpdateNeedySubmission"/>
+            <class name="tests.NeedyAPIs.GetNeedySubmissionForVerification"/>
+            <class name="tests.NeedyAPIs.GetUserNeedies"/>
+            <class name="tests.NeedyAPIs.StartNeedyVerification"/>
+            <class name="tests.NeedyAPIs.StopNeedyVerification"/>
+            <class name="tests.NeedyAPIs.ApproveNeedySubmission"/>
+            <class name="tests.NeedyAPIs.RejectNeedySubmission"/>
+            <class name="tests.NeedyAPIs.ReturnNeedySubmission"/>
+            <class name="tests.NeedyAPIs.GetPrposedDonation"/>
+
+
+
+
+
+                        -->
+        </classes>
+    </test>
+</suite>
