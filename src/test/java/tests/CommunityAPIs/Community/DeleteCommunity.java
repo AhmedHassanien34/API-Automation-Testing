@@ -51,7 +51,7 @@ public class DeleteCommunity {
 
         if (response.getStatusCode() != 200)
         {
-            System.out.println("End Point: /api/communities/" + CommunityId.CommunityId);
+            System.out.println("End Point: /api/communities/" + CreateNewCommunity.CommunityId);
             System.out.println("Response Body:");
             response.prettyPrint();
         }
@@ -71,7 +71,7 @@ public class DeleteCommunity {
 
         if (response.getStatusCode() != 404)
         {
-            System.out.println("End Point: /api/communities/" + CommunityId.CommunityId);
+            System.out.println("End Point: /api/communities/" + CreateNewCommunity.CommunityId);
             System.out.println("Response Body:");
             response.prettyPrint();
         }
@@ -96,7 +96,7 @@ public class DeleteCommunity {
 
         if (response.getStatusCode() != 400)
         {
-            System.out.println("End Point: /api/communities/" + CommunityId.CommunityId);
+            System.out.println("End Point: /api/communities/" + CreateNewCommunity.CommunityId);
             System.out.println("Response Body:");
             response.prettyPrint();
         }
