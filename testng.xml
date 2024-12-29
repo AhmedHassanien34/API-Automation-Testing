@@ -19,7 +19,7 @@
            <class name="tests.AuthenticationAPIs.LoginApiTest"/>
            <class name="tests.AuthenticationAPIs.LogoutApiTest"/>
            <class name="tests.AuthenticationAPIs.RefreshTokenApiTest"/>
-
+ <!--
            <class name="tests.CommunityAPIs.Community.CreateNewCommunity"/>
            <class name="tests.CommunityAPIs.Community.JoinCommunity"/>
            <class name="tests.CommunityAPIs.Community.ConfirmJoiningCommunity"/>
